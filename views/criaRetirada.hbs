@@ -1,0 +1,33 @@
+<div class="container-fluid ">
+    <div class="pedido">
+        <h1>{{tituloPagina}}</h1>
+
+        <div>
+            <form action="" method="post">
+                <div class="row">
+                    <div class="col-6">
+                        <label for="nome" class="form-label">Cliente:</label>
+                        <input type="text" class="form-control" id="nome" placeholder="nome do cliente">
+                    </div>
+                    <div class="col-6">
+                        <label for="telefone" class="form-label">Telefone do cliente:</label>
+                        <input type="tel" class="form-control" id="telefone" placeholder="digite o telefone do cliente">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label for="retirada" class="form-label">Nome de quem vai retirar: </label>
+                        <input type="text" class="form-control" id="retirada"
+                            placeholder="digite o nome de quem vai receber">
+                    </div>
+                    <div class="col">
+                        <label for="retiradaNum" class="form-label">Telefone de quem vai receber: </label>
+                        <input type="tel" class="form-control" id="retiradaNum"
+                            placeholder="digite o telefone de quem vai retirar">
+                    </div>
+                </div>
+                <button class="btn btn-secondary" type="submit">Enviar pedido</button>
+            </form>
+        </div>
+    </div>
+</div>
