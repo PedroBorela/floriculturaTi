@@ -1,0 +1,150 @@
+
+
+
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-image: url(/images/flores.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+
+  min-height: 100vh;
+
+
+}
+
+.pedido {
+  margin-top: 40px;
+  padding: 50px 20px;
+  background: rgba(38, 202, 65, 0.7);
+
+}
+
+.pedido .btn {
+
+  margin-top: 20px;
+}
+
+.pedido .form-label {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.brilhante {
+  margin-top: 30px;
+  font-size: 36px;
+  color: #000;
+  text-align: center;
+  font-family: "Delius",cursive;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+    0 0 20px rgba(255, 255, 255, 0.6),
+    0 0 30px rgba(255, 255, 255, 0.4),
+    0 0 40px #ff00ff,
+    0 0 70px #ff00ff,
+    0 0 80px #ff00ff,
+    0 0 100px #ff00ff;
+  animation: brilho 2s infinite alternate;
+}
+
+@keyframes brilho {
+  from {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5),
+      0 0 10px rgba(255, 255, 255, 0.4),
+      0 0 20px rgba(255, 255, 255, 0.3),
+      0 0 30px #ff00ff,
+      0 0 40px #ff00ff,
+      0 0 50px #ff00ff,
+      0 0 60px #ff00ff;
+  }
+
+  to {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+      0 0 20px rgba(255, 255, 255, 0.6),
+      0 0 30px rgba(255, 255, 255, 0.4),
+      0 0 40px #ff00ff,
+      0 0 70px #ff00ff,
+      0 0 80px #ff00ff,
+      0 0 100px #ff00ff;
+  }
+}
+
+/* header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 700px;
+} */
+
+.logo img {
+  width: 100px;
+}
+
+/* nav ul {
+  list-style-type: none;
+  padding: 0;
+} */
+
+/* nav ul li {
+  display: inline;
+  margin-left: 20px;
+} */
+
+/* nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+} */
+
+/* nav ul li a:hover {
+  text-decoration: underline;
+} */
+
+/* h1 {
+  text-align: center;
+} */
+/* #corpoForm{
+  padding: 20px;
+  background-color: #26CA41;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  width: 100%;
+  max-width:700px ;
+  margin: auto ;
+  text-align: center;
+} */
+
+/* #botoes{
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+} */
+
+/* label {
+  margin: 10px 0;
+  display: inline-block;
+  width: 210px;
+  font-weight: bold;
+  text-align: left;
+  
+} */
+
+
+
+/* input[type="button"] {
+ 
+  margin: 5px;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+} */
+
+/* input[type="button"]:hover {
+  background-color: #45a049;
+} */
