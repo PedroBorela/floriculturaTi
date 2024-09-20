@@ -3,38 +3,49 @@
         <h1>{{tituloPagina}}</h1>
 
         <div >
-            <form action="" method="post">
+            <form action="/pedido/cria" method="post">
                 <div class="row">
-                    <div class="col-6">
+                    <div class="col-8">
                         <label for="nome" class="form-label">Cliente:</label>
-                        <input type="text" class="form-control" id="nome" placeholder="nome do cliente">
+                        <input type="text" name="nome" class="form-control" id="nome" placeholder="nome do cliente">
                     </div>
-                    <div class="col-6">
+                    <div class="col-4">
                         <label for="telefone" class="form-label">Telefone do cliente:</label>
-                        <input type="tel" class="form-control" id="telefone" placeholder="digite o telefone do cliente">
+                        <input type="tel" name="telefone" class="form-control" id="telefone" placeholder="digite o telefone do cliente">
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col">
+                    <div class="col-8">
                         <label for="destinatario" class="form-label">Entregar para: </label>
-                        <input type="text" class="form-control" id="destinatario"
+                        <input type="text" name="destinatario" class="form-control" id="destinatario"
                             placeholder="digite o nome de quem vai receber">
                     </div>
-                    <div class="col">
+                    <div class="col-4">
                         <label for="destinatarioNum" class="form-label">Telefone de quem vai receber: </label>
-                        <input type="tel" class="form-control" id="destinatarioNum"
+                        <input type="tel" name="destinatarioNum" class="form-control" id="destinatarioNum"
                             placeholder="digite o telefone de quem vai receber">
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col">
+                    <div class="col-8">
                         <label for="endereco" class="form-label">Endereço: </label>
-                        <input type="tel" class="form-control" id="endereco" placeholder="digite o endereço da entrega">
+                        <input type="text" name="endereco" class="form-control" id="endereco" placeholder="digite o endereço da entrega">
                     </div>
-                    <div class="col">
+                    <div class="col-4">
                         <label for="referencia" class="form-label">Referência: </label>
-                        <input type="tel" class="form-control" id="referencia"
+                        <input type="text" name="referencia" class="form-control" id="referencia"
                             placeholder="digite o endereço da entrega">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-2">
+                        <label for="dataEntrega" class="form-label">Data: </label>
+                        <input type="date" name="dataEntrega" class="form-control" id="dataDeEntrega" >
+                    </div>
+                    <div class="col-2">
+                        <label for="horarioEntrega" class="form-label">Horário: </label>
+                        <input type="time" name="horarioEntrega" class="form-control" id="horarioEntrega"
+                            >
                     </div>
                 </div>
                 <button class="btn btn-secondary" type="submit">Enviar pedido</button>

@@ -4,6 +4,10 @@ var controllerPedido = require('../controller/controllerPedido.js')
 
 
 router.get('/criaPedido', controllerPedido.criaPedido);
-router.get('/criaRetirada', controllerPedido.criaRetirada);
+
+
+router.post('/cria',controllerPedido.criaPedido_post)
+
+
 
 module.exports = router;
