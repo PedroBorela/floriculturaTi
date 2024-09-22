@@ -1,17 +1,25 @@
-
+root{
+  font-size: 62.5%;
+}
 
 
 body {
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  /* background-image: url(/images/flores.jpg);
+  font: 14px "Lora","Lucida Grande", Helvetica, Arial;
+  background-image: url(/images/fundoSiteNg.svg);
   background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed; */
+  background-repeat: repeat;
+  background-position: calc();
+  background-attachment: fixed;
+  overflow-x: hidden;
 
   min-height: 100vh;
 
 
+}
+
+.container-fluid{
+  
+  padding: 0;
 }
 
 .pedido {
@@ -31,24 +39,27 @@ body {
   margin-top: 20px;
 }
 
+
 .pedido .form-label {
   margin-top: 10px;
   margin-bottom: 10px;
 }
 
+
+
 .brilhante {
   margin-top: 30px;
-  font-size: 36px;
-  color: #000;
+  font-size: 2.2vw;
+  color: white;
   text-align: center;
   font-family: "Delius",cursive;
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
     0 0 20px rgba(255, 255, 255, 0.6),
     0 0 30px rgba(255, 255, 255, 0.4),
-    0 0 40px #ff00ff,
-    0 0 70px #ff00ff,
-    0 0 80px #ff00ff,
-    0 0 100px #ff00ff;
+    0 0 40px #c3ff00,
+    0 0 70px #c3ff00,
+    0 0 80px #c3ff00,
+    0 0 100px #c3ff00;
   animation: brilho 2s infinite alternate;
 }
 
@@ -57,49 +68,74 @@ body {
     text-shadow: 0 0 5px rgba(255, 255, 255, 0.5),
       0 0 10px rgba(255, 255, 255, 0.4),
       0 0 20px rgba(255, 255, 255, 0.3),
-      0 0 30px #ff00ff,
-      0 0 40px #ff00ff,
-      0 0 50px #ff00ff,
-      0 0 60px #ff00ff;
+      0 0 30px #c3ff00,
+      0 0 40px #c3ff00,
+      0 0 50px #c3ff00,
+      0 0 60px #c3ff00;
   }
 
   to {
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
       0 0 20px rgba(255, 255, 255, 0.6),
       0 0 30px rgba(255, 255, 255, 0.4),
-      0 0 40px #ff00ff,
-      0 0 70px #ff00ff,
-      0 0 80px #ff00ff,
-      0 0 100px #ff00ff;
+      0 0 40px #c3ff00,
+      0 0 70px #c3ff00,
+      0 0 80px #c3ff00,
+      0 0 100px #c3ff00;
   }
 }
+/* 
+.sarah{
+  background-image: url(/images/sarahBq.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+} */
 
 .informacao{
   margin-top: 15px;
- background-color: rgba(0,0,0,0.5);
+ background-color: rgba(10,107,60,0.8) ;
  padding: 20px;
- color: antiquewhite;
+ font-weight: 700;
+ color: white;
  text-align: center;
  background-attachment: fixed;
 }
 .texto{
-  font-size: 20px;
+  font-size: 2.5em;
   text-align: justify;
   line-height: 30px;
+}
+
+.texto .display-6{
+font-size: 2.2vw;
 }
 .flores{
   margin:20px 0 ;
 }
 
+.bloco{
+  background-color: black;
+}
+
+.card{
+  margin-right: 5px;
+  margin-top:5px;
+}
+
+.imagem{
+  transition: filter 0.5s ease;
+}
 .imagem:hover img {
-  opacity: 0.5; 
+  filter: grayscale(70%);
 }
 .nome-flor {
   transform: translate(-50%, -50%);
   color: white;
-  font-size: 24px;
+  font-size: 2vw;
   font-weight: bold;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
   opacity: 0; /* Começa invisível */
   transition: opacity 0.5s ease;
 }

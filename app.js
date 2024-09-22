@@ -7,6 +7,7 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var rotasPedido = require('./routes/rotasPedido');
 var rotasRetirada = require('./routes/rotasRetirada');
+var rotasProdutos = require('./routes/rotasProdutos');
 
 var app = express();
 
@@ -23,6 +24,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/pedido', rotasPedido);
 app.use('/retirada', rotasRetirada);
+app.use('/produtos', rotasProdutos);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -39,5 +42,9 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+const PORT= process.env.PORT || 3000;
+app.listen(PORT, '0.0.0.0',() => {
+  console.log('Servidor rodando na porta ${PORT} ')
+})
 
 module.exports = app;
