@@ -143,9 +143,19 @@ font-size: 2.2vw;
 .imagem:hover .nome-flor {
   opacity: 1; /* Exibe o nome da flor ao passar o mouse */
 }
-
+.pedidos, .retiradas {
+  background-color: rgba(10,107,60,0.8); 
+  color: #fff; /* Texto branco */
+  padding: 20px;
+  margin: 20px;
+ 
+  border-radius: 10px; /* Bordas arredondadas para suavizar */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve para destacar */
+}
 
 .logo img {
   width: 100px;
 }
+
+
 

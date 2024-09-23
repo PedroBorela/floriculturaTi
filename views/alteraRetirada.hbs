@@ -3,27 +3,27 @@
         <h1>{{tituloPagina}}</h1>
 
         <div>
-            <form action="/retirada/cria" method="post">
+            <form action="/retirada/alteraRetirada/{{retirada.codigo}}" method="post">
                 <div class="row">
                     <div class="col-12 col-md-6 col-lg-8">
                         <label for="nome" class="form-label">Cliente:</label>
-                        <input required type="text" name="nome" class="form-control" id="nome" placeholder="nome do cliente">
+                        <input value="{{retirada.nome}}" required type="text" name="nome" class="form-control" id="nome" placeholder="nome do cliente">
                     </div>
                     <div class="col-12 col-md-6 col-lg-4">
                         <label for="telefone" class="form-label">Telefone do cliente:</label>
-                        <input required type="tel" name="telefone" class="form-control" id="telefone" placeholder="digite o telefone do cliente">
+                        <input value="{{retirada.telefone}}" required type="tel" name="telefone" class="form-control" id="telefone" placeholder="digite o telefone do cliente">
                     </div>
                 </div>
                 
                  <div class="row">
                     <div class="col-12 col-md-6 col-lg-8">
                         <label for="produtos" class="form-label">Produtos:</label>
-                        <input required type="text" name="produtos" class="form-control" id="nome"
+                        <input value="{{retirada.produtos}}" required type="text" name="produtos" class="form-control" id="nome"
                             placeholder="Digite os produtos e quantidade">
                     </div>
                     <div class="col-12 col-md-6 col-lg-4">
                         <label for="valorPedido" class="form-label">Valor total do pedido:</label>
-                        <input requiredb step="0.01" type="number" name="valorPedido" class="form-control" id="telefone"
+                        <input value="{{retirada.valorPedido}}" requiredb step="0.01" type="number" name="valorPedido" class="form-control" id="telefone"
                             placeholder="digite o valor total do pedido">
                     </div>
                 </div>
@@ -31,12 +31,12 @@
                 <div class="row">
                     <div class="col-12 col-md-6 col-lg-8">
                         <label for="retirada" class="form-label">Nome de quem vai retirar: </label>
-                        <input required type="text" name="retirada" class="form-control" id="retirada"
+                        <input value="{{retirada.retirada}}" required type="text" name="retirada" class="form-control" id="retirada"
                             placeholder="digite o nome de quem vai receber">
                     </div>
                     <div class="col-12 col-md-6 col-lg-4">
                         <label for="retiradaNum" class="form-label">Telefone de quem vai receber: </label>
-                        <input type="tel" name="retiradaNum" class="form-control" id="retiradaNum"
+                        <input value="{{retirada.retiradaNum}}" type="tel" name="retiradaNum" class="form-control" id="retiradaNum"
                             placeholder="digite o telefone de quem vai retirar">
                     </div>
                 </div>
@@ -44,16 +44,17 @@
                 <div class="row">
                     <div class="col-6 col-md-4 col-lg-2">
                         <label for="dataEntrega" class="form-label">Data: </label>
-                        <input type="date" name="dataEntrega" class="form-control" id="dataDeEntrega" >
+                        <input value="{{retirada.dataEntrega}}" type="date" name="dataEntrega" class="form-control" id="dataDeEntrega" >
                     </div>
                     <div class="col-6 col-md-4 col-lg-2">
                         <label for="horarioEntrega" class="form-label">Horário: </label>
-                        <input type="time" name="horarioEntrega" class="form-control" id="horarioEntrega"
+                        <input value="{{retirada.horarioEntrega}}" type="time" name="horarioEntrega" class="form-control" id="horarioEntrega"
                             >
                     </div>
                 </div>
 
-                <button class="btn btn-secondary" type="submit">Enviar pedido</button>
+                <button class="btn btn-secondary" type="submit">Alterar pedido</button>
+                <a href="/consulta"><button class="btn btn-danger" type="button">Cancelar</button></a>
             </form>
         </div>
     </div>

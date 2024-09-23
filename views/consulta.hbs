@@ -1,0 +1,67 @@
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            <h2>Pedidos</h2>
+            <div class="container-fluid pedidos">
+                {{#if pedidos}}
+                {{#each pedidos}}
+                <div class="row mb-3">
+                    <div class="col-12 d-print-block">
+                        <div class="card shadow-sm">
+                            <div class="card-body">
+                                <h5 class="card-title">Entregar para {{this.nome}}</h5>
+                                <p class="card-text"><strong>Telefone:</strong> {{this.telefone}}</p>
+                                <p class="card-text"><strong>Destinatário:</strong> {{this.destinatario}} </p>
+                                   <p><strong>Número destinatário:</strong> {{this.destinatarioNum}}</p>
+                                <p class="card-text"><strong>Produtos:</strong> {{this.produtos}}</p>
+                                <p class="card-text"><strong>Valor do Pedido:</strong> R$ {{this.valorPedido}}</p>
+                                <p class="card-text"><strong>Endereço:</strong> {{this.endereco}}</p>
+                                <p class="card-text"><strong>Referência:</strong> {{this.referencia}}</p>
+                                <p class="card-text"><strong>Data de Entrega:</strong> {{this.dataEntrega}}</p>
+                                <p class="card-text"><strong>Horário de Entrega:</strong> {{this.horarioEntrega}}</p>
+                                <a href="pedido/alteraPedido/{{this.codigo}}"><button class="btn btn-primary">Alterar</button></a>
+                                <button onclick="window.print()" class="btn btn-info" data-bs-toggle="popover" data-bs-title="Imprimir comprovante" data-bs-content="Este botão serve para imprimir os pedidos de entrega">imprimir</button>
+                                <a href="/pedido/deleta/{{this.codigo}}"><buttton class="btn btn-danger">Deletar</buttton></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {{/each}}
+                {{else}}
+                    <p>Ainda não há pedidos feitos</p>
+                    {{/if}}
+            </div>
+        </div>
+        <div class="col-6">
+            <h2>Retiradas</h2>
+            <div class="container-fluid retiradas">
+                {{#if retiradas}}
+                {{#each retiradas}}
+                <div class="row mb-3">
+                    <div class="col-12">
+                        <div class="card shadow-sm">
+                            <div class="card-body">
+                                <h5 class="card-title">{{this.nome}} fez o pedido</h5>
+                                <p class="card-text"><strong>Telefone:</strong> {{this.telefone}}</p>
+                                <p class="card-text"><strong>Vem Retirar:</strong> {{this.retirada}} </p>
+                                 <p><strong>Número retirante: </strong>{{this.retiradaNum}}
+                                </p>
+                                <p class="card-text"><strong>Produtos:</strong> {{this.produtos}}</p>
+                                <p class="card-text"><strong>Valor do Pedido:</strong> R$ {{this.valorPedido}}</p>
+                                <p class="card-text"><strong>Data de retirada:</strong> {{this.dataEntrega}}</p>
+                                <p class="card-text"><strong>Horário de retirada:</strong> {{this.horarioEntrega}}</p>
+                                <a href="retirada/alteraRetirada/{{this.codigo}}"><button class="btn btn-primary">Alterar</button></a>
+                                <button onclick="window.print()" class="btn btn-info" data-bs-toggle="popover" data-bs-title="Imprimir comprovante" data-bs-content="Este botão serve para imprimir os pedidos de entrega">imprimir</button>
+                                <a href="/retirada/deleta/{{this.codigo}}"><buttton class="btn btn-danger">Deletar</buttton></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {{/each}}
+                {{else}}
+                    <p>Ainda não há retiradas marcadas</p>
+                    {{/if}}
+            </div>
+        </div>
+    </div>
+</div>
